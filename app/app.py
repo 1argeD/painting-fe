@@ -1,7 +1,6 @@
 import pynecone as pc
-from tkinter import *
 
-from app.pages import painting
+from app.pages import canvas
 
 
 class State(pc.State):
@@ -9,6 +8,5 @@ class State(pc.State):
 
 
 app = pc.App(state=State)
-app.add_page(painting.about)
-app.add_page(painting.paint, path="/paint")
+app.add_page(canvas.canvas)
 app.compile()
