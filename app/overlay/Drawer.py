@@ -33,3 +33,6 @@ pc.box(
         is_open=DrawerState.show_right,
     ),
 )
+
+pc.badge(DrawerState.show_right)
+

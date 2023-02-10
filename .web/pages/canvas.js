@@ -2,7 +2,7 @@ import {useEffect, useRef, useState} from "react"
 import {useRouter} from "next/router"
 import {E, connect, updateState} from "/utils/state"
 import "focus-visible/dist/focus-visible"
-import {Grid, GridItem, VStack, useColorMode} from "@chakra-ui/react"
+import {Grid, GridItem, useColorMode} from "@chakra-ui/react"
 import NextHead from "next/head"
 
 const EVENT = "ws://localhost:8000/event"
@@ -47,14 +47,13 @@ useEffect(() => {
   update()
 })
 return (
-<Grid sx={{"h": "60em", "width": "100%", "padding": "1em"}}><VStack>{drawer_state.show_right}</VStack>
-<GridItem rowSpan={1}
+<Grid sx={{"h": "60em", "width": "100%", "padding": "1em"}}><GridItem rowSpan={1}
 colSpan={1}
 sx={{"bg": "black"}}/>
 <NextHead><title>{`Pynecone App`}</title>
 <meta name="description"
 content="A Pynecone app."/>
-<meta property="og:image"
-content="favicon.ico"/></NextHead></Grid>
+<meta content="favicon.ico"
+property="og:image"/></NextHead></Grid>
 )
 }
