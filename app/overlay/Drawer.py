@@ -6,10 +6,10 @@ class DrawerState(pc.State):
     show_top: bool = False
 
     def top(self):
-        self.show_top = not (self.show_top)
+        self.show_top = not self.show_top
 
     def right(self):
-        self.show_right = not (self.show_right)
+        self.show_right = not self.show_right
 
 
 pc.box(
@@ -34,5 +34,9 @@ pc.box(
     ),
 )
 
-pc.badge(DrawerState.show_right)
+
+def right():
+    return pc.drawer(
+        DrawerState.show_right,
+        )
 
